@@ -1,10 +1,13 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+const colors = require('tailwindcss/colors');
+console.log('colors:', colors);
 
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -13,8 +16,19 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        primary: 'rgb(0, 82, 255)',
+        background: colors.slate['50'],
+      },
+    },
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+      xxl: '1600px',
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
