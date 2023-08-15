@@ -1,5 +1,5 @@
 import React from 'react';
-import { publicRoutes, publicRoutesType } from '../route';
+import { publicRoutes, publicRoutesType } from '../routes';
 import Link from 'next/link';
 import Menu from './menu';
 

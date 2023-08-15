@@ -1,3 +1,3 @@
-import PublicLayout from './publicLayout';
-
-export { PublicLayout };
+export * from './publicLayout';
+export * from './authLayout';
+export * from './protectedLayout';

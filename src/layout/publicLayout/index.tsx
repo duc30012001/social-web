@@ -9,16 +9,12 @@ type Props = {
   children: ReactNode;
 };
 
-function PublicLayout({ children }: Props) {
+export function PublicLayout({ children }: Props) {
   return (
-    <ConfigProvider theme={theme}>
-      <div className="bg-background">
-        <Header />
-        <Content>{children}</Content>
-        <Footer />
-      </div>
-    </ConfigProvider>
+    <div className="bg-background">
+      <Header />
+      <Content>{children}</Content>
+      <Footer />
+    </div>
   );
 }
-
-export default PublicLayout;

@@ -1,17 +1,17 @@
 import Section from '@/components/section';
 import React from 'react';
-import ServiceTable from './ServiceTable';
-import Button from '@/lib/Button';
+import { Button } from '@/components/ui';
+import { ViewAllButton } from '../components/viewAllButton';
+import { ServiceHeader, ServicesTable } from '@/components/services';
 
 type Props = {};
 
 function PopularServices({}: Props) {
   return (
     <Section title="Most Popular Services">
-      <ServiceTable />
-      <div className="text-center mt-16">
-        <Button type="primary">View All Service</Button>
-      </div>
+      <ServiceHeader />
+      <ServicesTable pagination={false} />
+      <ViewAllButton href="services" />
     </Section>
   );
 }

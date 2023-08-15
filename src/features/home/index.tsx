@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Banner from './banner';
 import PopularServices from './popularServices';
+import FAQ from './faq';
 
 type Props = {};
 
@@ -11,6 +12,7 @@ function Home({}: Props) {
     <div>
       <Banner />
       <PopularServices />
+      <FAQ />
     </div>
   );
 }

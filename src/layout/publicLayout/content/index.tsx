@@ -1,3 +1,4 @@
+import { LiveChatButton, ScrollToTopButton } from '@/components/ui';
 import React, { ReactNode } from 'react';
 
 type Props = {
@@ -5,7 +6,13 @@ type Props = {
 };
 
 function Content({ children }: Props) {
-  return <div>{children}</div>;
+  return (
+    <div className="mb-20">
+      {children}
+      <ScrollToTopButton />
+      <LiveChatButton />
+    </div>
+  );
 }
 
 export default Content;

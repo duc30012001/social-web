@@ -2,9 +2,7 @@
 
 import { Table } from 'antd';
 import React from 'react';
-import type { ColumnsType } from 'antd/es/table';
-
-type Props = {};
+import type { ColumnsType, TableProps } from 'antd/es/table';
 
 interface DataType {
   id: number;
@@ -19,22 +17,22 @@ interface DataType {
   pricePerThousand: number;
 }
 
-const data: DataType[] = [
-  {
-    id: 1998,
-    name: 'YouTube Views',
-    description: '',
-    rate: 131,
-    qa: 1,
-    startTime: 'Instant Start',
-    minOrder: 100,
-    maxOrder: 10000000,
-    speed: '100 - 50000',
-    pricePerThousand: 3.2,
-  },
-];
+type Props = {} & TableProps<DataType>;
 
-function ServiceTable({}: Props) {
+const data: DataType = {
+  id: 1998,
+  name: 'YouTube Views',
+  description: '',
+  rate: 131,
+  qa: 1,
+  startTime: 'Instant Start',
+  minOrder: 100,
+  maxOrder: 10000000,
+  speed: '100 - 50000',
+  pricePerThousand: 3.2,
+};
+
+export function ServicesTable(props: Props) {
   const columns: ColumnsType<DataType> = [
     {
       title: 'ID',
@@ -92,7 +90,7 @@ function ServiceTable({}: Props) {
       ),
     },
   ];
-  return <Table columns={columns} dataSource={data} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={Array(50).fill(data)} {...props} />
+  );
 }
-
-export default ServiceTable;

@@ -3,6 +3,7 @@ import AppLogo from './appLogo';
 import Navbar from './navbar';
 import Action from './action';
 import NavbarMobile from './navbarMobile';
+import Container from '@/components/container';
 
 type Props = {};
 
@@ -10,7 +11,7 @@ function Header({}: Props) {
   return (
     <header className="p-3 mb-20">
       <nav>
-        <div className="container mx-auto max-w-7xl">
+        <Container>
           <ul className="flex flex-row items-center justify-between">
             <li className="block lg:hidden">
               <NavbarMobile />
@@ -21,7 +22,7 @@ function Header({}: Props) {
             </li>
             <Action />
           </ul>
-        </div>
+        </Container>
       </nav>
     </header>
   );
