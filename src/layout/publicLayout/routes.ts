@@ -17,11 +17,11 @@ export const publicRoutes: publicRoutesType[] = [
     label: 'FAQ',
     href: '/faq',
   },
-  {
-    id: 3,
-    label: 'Contact Us',
-    href: '/contact',
-  },
+  // {
+  //   id: 3,
+  //   label: 'Contact Us',
+  //   href: '/contact',
+  // },
 ];
 
 export type footerRoutesType = {
